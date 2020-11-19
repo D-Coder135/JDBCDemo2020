@@ -6,6 +6,7 @@
 package connection;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class DatabaseConnection {
 
@@ -25,7 +26,7 @@ public class DatabaseConnection {
     private static Connection connection = null;
 
     public void connectToDatabase() {
-
+        connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
     }
 
 }
