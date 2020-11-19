@@ -24,4 +24,8 @@ public class DatabaseConnection {
 
     private static Connection connection = null;
 
+    public void connectToDatabase() {
+
+    }
+
 }
