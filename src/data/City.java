@@ -6,4 +6,7 @@
 package data;
 
 public class City {
+    private String name;
+    private boolean isTraversed;
+    private int kilometersRequired;
 }
