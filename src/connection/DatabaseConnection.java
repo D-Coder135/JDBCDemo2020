@@ -39,6 +39,8 @@ public class DatabaseConnection {
     }
 
     private void printConnectionStatus() {
+        System.out.println(connection == null ? "The connection to the database is inactive..." :
+                "The connection to the database is active...");
     }
 
 }
