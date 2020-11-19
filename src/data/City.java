@@ -9,4 +9,12 @@ public class City {
     private String name;
     private boolean isTraversed;
     private int kilometersRequired;
+
+    public City(String name, boolean isTraversed, int kilometersRequired) {
+        this.name = name;
+        this.isTraversed = isTraversed;
+        this.kilometersRequired = kilometersRequired;
+    }
+
+
 }
