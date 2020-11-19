@@ -12,6 +12,7 @@ public class DatabaseConnection {
     // 1. URL of the database.
     // localhost (on our computer)
     // IP --> 127.0.0.1 or domain name --> localhost
+    private static final String URL = "";
 
     // 2. Username of the admin of the database.
 
