@@ -34,7 +34,7 @@ public class DatabaseConnection {
                     "Please check your URL, Username and Password!");
         }
         finally {
-
+            printConnectionStatus();
         }
     }
 
