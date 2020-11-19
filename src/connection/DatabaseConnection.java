@@ -5,6 +5,8 @@
  */
 package connection;
 
+import java.sql.Connection;
+
 public class DatabaseConnection {
 
     // What we need inside this DatabaseConnection class -->
