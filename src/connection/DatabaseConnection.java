@@ -12,11 +12,12 @@ public class DatabaseConnection {
     // 1. URL of the database.
     // localhost (on our computer)
     // IP --> 127.0.0.1 or domain name --> localhost
-    private static final String URL = "";
+    private static final String URL = "jdbc:mysql://localhost:3306/demo_database";
 
     // 2. Username of the admin of the database.
     private static final String USERNAME ="";
 
     // 3. Password of the admin of the database.
     private static final String PASSWORD = "";
+
 }
