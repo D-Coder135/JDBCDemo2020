@@ -33,6 +33,9 @@ public class DatabaseConnection {
             System.err.println("Could not connect to the database." +
                     "Please check your URL, Username and Password!");
         }
+        finally {
+
+        }
     }
 
 }
