@@ -15,9 +15,11 @@ public class DatabaseConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/demo_database";
 
     // 2. Username of the admin of the database.
-    private static final String USERNAME ="root";
+    private static final String USERNAME = "root";
 
     // 3. Password of the admin of the database.
     private static final String PASSWORD = "";
+
+    private static Connection connection = null;
 
 }
