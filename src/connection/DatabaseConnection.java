@@ -7,6 +7,7 @@ package connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DatabaseConnection {
 
@@ -26,7 +27,12 @@ public class DatabaseConnection {
     private static Connection connection = null;
 
     public void connectToDatabase() {
-        connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+        try {
+            connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+        } catch (SQLException exception) {
+            System.err.println("Could not connect to the database." +
+                    "Please check your URL, Username and Password!");
+        }
     }
 
 }
