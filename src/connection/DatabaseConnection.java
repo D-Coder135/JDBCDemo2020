@@ -18,4 +18,5 @@ public class DatabaseConnection {
     private static final String USERNAME ="";
 
     // 3. Password of the admin of the database.
+    private static final String PASSWORD = "";
 }
