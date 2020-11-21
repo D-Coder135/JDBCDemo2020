@@ -12,7 +12,11 @@ public class CityEntryHelper {
     public boolean createNewCity() {
         return false;
     }
+
     // 2. to read all the cities from the database.(READ)
+    public void readAllCities() {
+
+    }
     // 3. to modify the attributes of a city in the database.(UPDATE)
     // 4. to delete a city from the database.(DELETE)
 
