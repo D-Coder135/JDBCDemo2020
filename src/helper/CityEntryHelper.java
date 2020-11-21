@@ -5,6 +5,10 @@
  */
 package helper;
 
+import data.City;
+
+import java.sql.Connection;
+
 public class CityEntryHelper {
     // Inside this CityEntryHelper class, we will create methods to execute the queries.
 
@@ -12,7 +16,7 @@ public class CityEntryHelper {
             + "values (?, ? ,?)";
 
     // 1. to add a city in the database (CREATE)
-    public boolean createNewCity() {
+    public boolean createNewCity(Connection connection, City city) {
         return false;
     }
 
