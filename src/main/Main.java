@@ -10,6 +10,12 @@ import connection.DatabaseConnection;
 import java.util.Scanner;
 
 public class Main {
+
+    public static final int CREATE_CITY = 1;
+    public static final int VIEW_ALL_CITIES = 2;
+    public static final int MODIFY_CITY = 3;
+    public static final int DELETE_CITY = 4;
+
     public static void main(String[] args) {
         DatabaseConnection connection = new DatabaseConnection();
         connection.connectToDatabase();
@@ -22,13 +28,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         switch (choice) {
-            case 1:
+            case CREATE_CITY:
                 break;
-            case 2 :
+            case VIEW_ALL_CITIES:
                 break;
-            case 3:
+            case MODIFY_CITY:
                 break;
-            case 4:
+            case DELETE_CITY:
                 break;
             default:
         }
