@@ -26,6 +26,7 @@ public class CityEntryHelper {
         preparedStatement.setString(1, name);
         preparedStatement.setBoolean(2, isTraversed);
         preparedStatement.setInt(3, kilometersRequired);
+        preparedStatement.executeUpdate();
         return false;
     }
 
