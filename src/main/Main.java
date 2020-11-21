@@ -20,5 +20,6 @@ public class Main {
         System.out.println("4. Press 4 to delete a city: ");
         System.out.println("Please Enter Your Choice: ");
         Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
     }
 }
