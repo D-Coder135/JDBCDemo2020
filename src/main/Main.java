@@ -6,6 +6,7 @@
 package main;
 
 import connection.DatabaseConnection;
+import data.City;
 import helper.CityEntryHelper;
 
 import java.util.Scanner;
@@ -37,6 +38,8 @@ public class Main {
                 System.out.println("Have you been to the city yet? (true/false)");
                 boolean isTraversed = scanner.nextBoolean();
                 int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
+                helper.createNewCity(DatabaseConnection.getConnection(),new
+                        City(name,isTraversed,kmsRequired));
                 break;
             case VIEW_ALL_CITIES:
                 break;
