@@ -20,6 +20,7 @@ public class CityEntryHelper {
         String name = city.getName();
         boolean isTraversed = city.isTraversed();
         int kilometersRequired = city.getKilometersRequired();
+        connection.prepareStatement(INSERT_QUERY);
         return false;
     }
 
