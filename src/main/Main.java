@@ -6,6 +6,7 @@
 package main;
 
 import connection.DatabaseConnection;
+import helper.CityEntryHelper;
 
 import java.util.Scanner;
 
@@ -30,6 +31,7 @@ public class Main {
         scanner.nextLine();
         switch (choice) {
             case CREATE_CITY:
+                CityEntryHelper helper = new CityEntryHelper();
                 break;
             case VIEW_ALL_CITIES:
                 break;
