@@ -17,5 +17,6 @@ public class Main {
         System.out.println("Please enter the name of the city you want to add: ");
         String name = scanner.nextLine().trim();
         System.out.println("Please tell me if you have been to the city? (true/false): ");
+        boolean isTraversed = scanner.nextBoolean();
     }
 }
