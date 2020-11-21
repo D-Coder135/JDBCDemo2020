@@ -7,6 +7,8 @@ package main;
 
 import connection.DatabaseConnection;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         DatabaseConnection connection = new DatabaseConnection();
@@ -17,6 +19,6 @@ public class Main {
         System.out.println("3. Press 3 to modify a city: ");
         System.out.println("4. Press 4 to delete a city: ");
         System.out.println("Please Enter Your Choice: ");
-
+        Scanner scanner = new Scanner(System.in);
     }
 }
