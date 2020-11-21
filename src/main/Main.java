@@ -27,6 +27,7 @@ public class Main {
         System.out.println("Please Enter Your Choice: ");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
+        scanner.nextLine();
         switch (choice) {
             case CREATE_CITY:
                 break;
