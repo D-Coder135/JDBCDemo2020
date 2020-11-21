@@ -6,6 +6,7 @@
 package main;
 
 import connection.DatabaseConnection;
+import data.City;
 
 import java.util.Scanner;
 
@@ -19,5 +20,6 @@ public class Main {
         System.out.println("Please tell me if you have been to the city? (true/false): ");
         boolean isTraversed = scanner.nextBoolean();
         int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
+        City city = new City(name,isTraversed,kmsRequired);
     }
 }
