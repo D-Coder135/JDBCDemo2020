@@ -8,4 +8,9 @@ package helper;
 public class CityEntryHelper {
     // Inside this CityEntryHelper class, we will create methods to execute the queries.
 
+    // 1. to add a city in the database (CREATE)
+    // 2. to read all the cities from the database.(READ)
+    // 3. to modify the attributes of a city in the database.(UPDATE)
+    // 4. to delete a city from the database.(DELETE)
+
 }
