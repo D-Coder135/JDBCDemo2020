@@ -9,6 +9,7 @@ import connection.DatabaseConnection;
 import data.City;
 import helper.CityEntryHelper;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
@@ -21,8 +22,12 @@ public class Main {
         System.out.println("Please tell me if you have been to the city? (true/false): ");
         boolean isTraversed = scanner.nextBoolean();
         int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
-        City city = new City(name,isTraversed,kmsRequired);
+        City city = new City(name, isTraversed, kmsRequired);
         CityEntryHelper helper = new CityEntryHelper();
-        helper.createNewCity(DatabaseConnection.getConnection(),city);
+        try {
+            helper.createNewCity(DatabaseConnection.getConnection(), city);
+        } catch (SQLException exception) {
+            System.err.println(city.getName() + "could not be added to the database.");
+        }
     }
 }
