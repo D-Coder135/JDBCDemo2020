@@ -8,6 +8,9 @@ package helper;
 public class CityEntryHelper {
     // Inside this CityEntryHelper class, we will create methods to execute the queries.
 
+    private static final String INSERT_QUERY = "Insert into cities (Name, Traversed, Kilometers_required)"
+            + "values (?, ? ,?)";
+
     // 1. to add a city in the database (CREATE)
     public boolean createNewCity() {
         return false;
