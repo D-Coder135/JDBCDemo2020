@@ -33,6 +33,7 @@ public class Main {
             case CREATE_CITY:
                 CityEntryHelper helper = new CityEntryHelper();
                 System.out.println("Please enter the name of the city: ");
+                String name = scanner.nextLine().trim();
                 break;
             case VIEW_ALL_CITIES:
                 break;
