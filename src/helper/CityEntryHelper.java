@@ -8,6 +8,7 @@ package helper;
 import data.City;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public class CityEntryHelper {
     // Inside this CityEntryHelper class, we will create methods to execute the queries.
@@ -16,7 +17,7 @@ public class CityEntryHelper {
             + "values (?, ? ,?)";
 
     // 1. to add a city in the database (CREATE)
-    public boolean createNewCity(Connection connection, City city) {
+    public boolean createNewCity(Connection connection, City city) throws SQLException {
         String name = city.getName();
         boolean isTraversed = city.isTraversed();
         int kilometersRequired = city.getKilometersRequired();
