@@ -7,6 +7,7 @@ package main;
 
 import connection.DatabaseConnection;
 import data.City;
+import helper.CityEntryHelper;
 
 import java.util.Scanner;
 
@@ -21,5 +22,6 @@ public class Main {
         boolean isTraversed = scanner.nextBoolean();
         int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
         City city = new City(name,isTraversed,kmsRequired);
+        CityEntryHelper helper = new CityEntryHelper();
     }
 }
