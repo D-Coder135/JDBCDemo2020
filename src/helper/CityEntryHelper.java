@@ -6,4 +6,6 @@
 package helper;
 
 public class CityEntryHelper {
+    // Inside this CityEntryHelper class, we will create methods to execute the queries.
+
 }
