@@ -17,7 +17,11 @@ public class CityEntryHelper {
     public void readAllCities() {
 
     }
+
     // 3. to modify the attributes of a city in the database.(UPDATE)
+    public boolean modifyCity() {
+        return false;
+    }
     // 4. to delete a city from the database.(DELETE)
 
 }
