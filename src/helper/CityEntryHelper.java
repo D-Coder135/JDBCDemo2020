@@ -8,6 +8,7 @@ package helper;
 import data.City;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CityEntryHelper {
@@ -21,7 +22,7 @@ public class CityEntryHelper {
         String name = city.getName();
         boolean isTraversed = city.isTraversed();
         int kilometersRequired = city.getKilometersRequired();
-        connection.prepareStatement(INSERT_QUERY);
+        PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
         return false;
     }
 
