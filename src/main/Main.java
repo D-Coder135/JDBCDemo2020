@@ -36,6 +36,7 @@ public class Main {
                 String name = scanner.nextLine().trim();
                 System.out.println("Have you been to the city yet? (true/false)");
                 boolean isTraversed = scanner.nextBoolean();
+                int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
                 break;
             case VIEW_ALL_CITIES:
                 break;
