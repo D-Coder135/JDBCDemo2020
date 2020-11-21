@@ -32,6 +32,7 @@ public class Main {
         switch (choice) {
             case CREATE_CITY:
                 CityEntryHelper helper = new CityEntryHelper();
+                System.out.println("Please enter the name of the city: ");
                 break;
             case VIEW_ALL_CITIES:
                 break;
