@@ -26,6 +26,10 @@ public class DatabaseConnection {
 
     private static Connection connection = null;
 
+    public static Connection getConnection() {
+        return connection;
+    }
+
     public void connectToDatabase() {
         try {
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
