@@ -23,6 +23,9 @@ public class CityEntryHelper {
         boolean isTraversed = city.isTraversed();
         int kilometersRequired = city.getKilometersRequired();
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY);
+        preparedStatement.setString(1, name);
+        preparedStatement.setBoolean(2, isTraversed);
+        preparedStatement.setInt(3, kilometersRequired);
         return false;
     }
 
