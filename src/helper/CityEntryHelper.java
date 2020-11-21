@@ -17,6 +17,9 @@ public class CityEntryHelper {
 
     // 1. to add a city in the database (CREATE)
     public boolean createNewCity(Connection connection, City city) {
+        String name = city.getName();
+        boolean isTraversed = city.isTraversed();
+        int kilometersRequired = city.getKilometersRequired();
         return false;
     }
 
