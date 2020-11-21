@@ -11,6 +11,12 @@ public class Main {
     public static void main(String[] args) {
         DatabaseConnection connection = new DatabaseConnection();
         connection.connectToDatabase();
+        System.out.println("------MENU------");
+        System.out.println("1. Press 1 to add a new city: ");
+        System.out.println("2. Press 2 to view all the cities: ");
+        System.out.println("3. Press 3 to modify a city: ");
+        System.out.println("4. Press 4 to delete a city: ");
+        System.out.println("Please Enter Your Choice: ");
 
     }
 }
