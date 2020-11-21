@@ -22,6 +22,10 @@ public class CityEntryHelper {
     public boolean modifyCity() {
         return false;
     }
+
     // 4. to delete a city from the database.(DELETE)
+    public void deleteCity() {
+
+    }
 
 }
