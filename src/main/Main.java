@@ -18,5 +18,6 @@ public class Main {
         String name = scanner.nextLine().trim();
         System.out.println("Please tell me if you have been to the city? (true/false): ");
         boolean isTraversed = scanner.nextBoolean();
+        int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
     }
 }
