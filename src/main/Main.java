@@ -23,5 +23,6 @@ public class Main {
         int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
         City city = new City(name,isTraversed,kmsRequired);
         CityEntryHelper helper = new CityEntryHelper();
+        helper.createNewCity(DatabaseConnection.getConnection(),city);
     }
 }
