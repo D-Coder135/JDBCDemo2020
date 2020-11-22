@@ -59,10 +59,7 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
-                "name='" + name + '\'' +
-                ", isTraversed=" + isTraversed +
-                ", kilometersRequired=" + kilometersRequired +
-                '}';
+        return String.format("%s, %s. %d", name, isTraversed ? "I have been there" : "I have not been there",
+                kilometersRequired);
     }
 }
