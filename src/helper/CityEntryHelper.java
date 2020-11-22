@@ -54,7 +54,7 @@ public class CityEntryHelper {
     }
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
-    public void modifyCity(Connection connection) throws SQLException {
+    public void modifyCity(Connection connection, String oldName, String newName) throws SQLException {
         PreparedStatement updateStatement = connection.prepareStatement(UPDATE_QUERY);
 
     }
