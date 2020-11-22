@@ -22,6 +22,8 @@ public class CityEntryHelper {
             + "values (?, ? ,?)";
     private static final String READ_QUERY = "SELECT * FROM cities";
 
+    private static final String DELETE_QUERY = "DELETE FROM cities WHERE Name = ?;";
+
     // 1. to add a city in the database (CREATE)
     public boolean createNewCity(Connection connection, City city) throws SQLException {
         String name = city.getName();
