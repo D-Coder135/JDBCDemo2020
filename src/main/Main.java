@@ -40,6 +40,7 @@ public class Main {
                 String name = scanner.nextLine().trim();
                 System.out.println("Have you been to the city yet? (true/false)");
                 boolean isTraversed = scanner.nextBoolean();*/
+
                 String name = JOptionPane.showInputDialog(null,
                         "Please input the name of the city: ", "City Name",JOptionPane.PLAIN_MESSAGE);
                 boolean isTraversed = Boolean.parseBoolean(JOptionPane.showInputDialog(null,
@@ -52,6 +53,7 @@ public class Main {
                 }
                 break;
             case VIEW_ALL_CITIES:
+                helper.readAllCities(DatabaseConnection.getConnection());
                 break;
             case MODIFY_CITY:
                 break;
