@@ -54,8 +54,8 @@ public class CityEntryHelper {
     }
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
-    public boolean modifyCity() {
-        return false;
+    public void modifyCity() {
+
     }
 
     // 4. to delete a city from the database.(DELETE)
