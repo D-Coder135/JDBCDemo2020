@@ -5,7 +5,6 @@
  */
 package helper;
 
-import com.mysql.cj.protocol.Resultset;
 import data.City;
 
 import java.sql.Connection;
@@ -16,15 +15,12 @@ import java.sql.SQLException;
 public class CityEntryHelper {
     // Inside this CityEntryHelper class, we will create methods to execute the queries.
 
-    private static final String INSERT_QUERY = "Insert into cities (Name, Traversed, Kilometers_required)"
-            + "values (?, ? ,?)";
-
-    private static final String READ_QUERY = "SELECT * FROM cities";
-
     public static final String UPDATE_QUERY = "UPDATE cities SET Name = ? WHERE Name = ? ";
-
     public static final String NAME_COLUMN = "Name";
     public static final String TRAVERSED = "Traversed";
+    private static final String INSERT_QUERY = "Insert into cities (Name, Traversed, Kilometers_required)"
+            + "values (?, ? ,?)";
+    private static final String READ_QUERY = "SELECT * FROM cities";
 
     // 1. to add a city in the database (CREATE)
     public boolean createNewCity(Connection connection, City city) throws SQLException {
@@ -47,7 +43,7 @@ public class CityEntryHelper {
             String name = results.getString(NAME_COLUMN);
             boolean isTraversed = results.getBoolean(TRAVERSED);
             int kmsRequired = results.getInt("Kilometers_required");
-            City city = new City(name,isTraversed,kmsRequired);
+            City city = new City(name, isTraversed, kmsRequired);
             System.out.println(city);
             System.out.println("------------------------------");
         }
@@ -56,6 +52,8 @@ public class CityEntryHelper {
     // 3. to modify the attributes of a city in the database.(UPDATE)
     public void modifyCity(Connection connection, String oldName, String newName) throws SQLException {
         PreparedStatement updateStatement = connection.prepareStatement(UPDATE_QUERY);
+        updateStatement.setString(1, newName);
+        updateStatement.setString(2, oldName);
 
     }
 
