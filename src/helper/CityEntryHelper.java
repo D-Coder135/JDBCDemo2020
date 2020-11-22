@@ -44,6 +44,7 @@ public class CityEntryHelper {
             String name = results.getString(NAME_COLUMN);
             boolean isTraversed = results.getBoolean(TRAVERSED);
             int kmsRequired = results.getInt("Kilometers_required");
+            City city = new City(name,isTraversed,kmsRequired);
         }
     }
 
