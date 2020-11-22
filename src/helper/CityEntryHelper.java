@@ -54,7 +54,7 @@ public class CityEntryHelper {
     }
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
-    public void modifyCity() {
+    public void modifyCity(Connection connection) {
 
     }
 
