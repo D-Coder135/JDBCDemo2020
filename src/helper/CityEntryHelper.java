@@ -39,7 +39,7 @@ public class CityEntryHelper {
         PreparedStatement readStatement = connection.prepareStatement(READ_QUERY);
         ResultSet results = readStatement.executeQuery();
         while (results.next()) {
-
+            String name = results.getString("Name");
         }
     }
 
