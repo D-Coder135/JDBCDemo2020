@@ -68,7 +68,14 @@ public class Main {
                 String newName = JOptionPane.showInputDialog(null,
                         "Please enter the new name of the city", "City New Name"
                         ,JOptionPane.PLAIN_MESSAGE);
-                helper.modifyCity(DatabaseConnection.getConnection(),oldName,newName);
+                try {
+                    helper.modifyCity(DatabaseConnection.getConnection(),oldName,newName);
+                } catch (SQLException exception) {
+                    JOptionPane.showMessageDialog(null,
+                            "The city could not be updated!",
+                            "Error 2",
+                            JOptionPane.ERROR_MESSAGE);
+                }
                 break;
             case DELETE_CITY:
                 break;
