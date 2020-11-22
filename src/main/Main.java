@@ -34,10 +34,10 @@ public class Main {
         switch (choice) {
             case CREATE_CITY:
                 CityEntryHelper helper = new CityEntryHelper();
-                System.out.println("Please enter the name of the city: ");
+                /* System.out.println("Please enter the name of the city: ");
                 String name = scanner.nextLine().trim();
                 System.out.println("Have you been to the city yet? (true/false)");
-                boolean isTraversed = scanner.nextBoolean();
+                boolean isTraversed = scanner.nextBoolean();*/
                 int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
                 try {
                     helper.createNewCity(DatabaseConnection.getConnection(),new City(name,isTraversed,kmsRequired));
