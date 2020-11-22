@@ -32,10 +32,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         scanner.nextLine();
+        CityEntryHelper helper = new CityEntryHelper();
         switch (choice) {
             case CREATE_CITY:
-                CityEntryHelper helper = new CityEntryHelper();
-
                 /* System.out.println("Please enter the name of the city: ");
                 String name = scanner.nextLine().trim();
                 System.out.println("Have you been to the city yet? (true/false)");
