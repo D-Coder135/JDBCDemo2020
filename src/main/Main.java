@@ -41,12 +41,12 @@ public class Main {
                 boolean isTraversed = scanner.nextBoolean();*/
 
                 String name = JOptionPane.showInputDialog(null,
-                        "Please input the name of the city: ", "City Name",JOptionPane.PLAIN_MESSAGE);
+                        "Please input the name of the city: ", "City Name", JOptionPane.PLAIN_MESSAGE);
                 boolean isTraversed = Boolean.parseBoolean(JOptionPane.showInputDialog(null,
-                        "Have you been to the city? (true/false): ","Traversed",JOptionPane.PLAIN_MESSAGE));
+                        "Have you been to the city? (true/false): ", "Traversed", JOptionPane.PLAIN_MESSAGE));
                 int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
                 try {
-                    helper.createNewCity(DatabaseConnection.getConnection(),new City(name,isTraversed,kmsRequired));
+                    helper.createNewCity(DatabaseConnection.getConnection(), new City(name, isTraversed, kmsRequired));
                 } catch (SQLException exception) {
                     System.err.println("ERROR IN ADDING THE CITY!");
                 }
@@ -64,12 +64,12 @@ public class Main {
             case MODIFY_CITY:
                 String oldName = JOptionPane.showInputDialog(null,
                         "Please enter the old name of the city", "City Name"
-                        ,JOptionPane.PLAIN_MESSAGE);
+                        , JOptionPane.PLAIN_MESSAGE);
                 String newName = JOptionPane.showInputDialog(null,
                         "Please enter the new name of the city", "City New Name"
-                        ,JOptionPane.PLAIN_MESSAGE);
+                        , JOptionPane.PLAIN_MESSAGE);
                 try {
-                    helper.modifyCity(DatabaseConnection.getConnection(),oldName,newName);
+                    helper.modifyCity(DatabaseConnection.getConnection(), oldName, newName);
                 } catch (SQLException exception) {
                     JOptionPane.showMessageDialog(null,
                             "The city could not be updated!",
@@ -78,6 +78,9 @@ public class Main {
                 }
                 break;
             case DELETE_CITY:
+                name = JOptionPane.showInputDialog(null,
+                        "Please enter the name of the city you want to delete from the database",
+                        "Delete City", JOptionPane.PLAIN_MESSAGE);
                 break;
             default:
         }
