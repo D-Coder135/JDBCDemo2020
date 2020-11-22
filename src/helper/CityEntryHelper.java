@@ -5,10 +5,12 @@
  */
 package helper;
 
+import com.mysql.cj.protocol.Resultset;
 import data.City;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CityEntryHelper {
@@ -35,7 +37,7 @@ public class CityEntryHelper {
     // 2. to read all the cities from the database.(READ)
     public void readAllCities(Connection connection) throws SQLException {
         PreparedStatement readStatement = connection.prepareStatement(READ_QUERY);
-        readStatement.executeQuery();
+        ResultSet results = readStatement.executeQuery();
     }
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
