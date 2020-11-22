@@ -63,6 +63,7 @@ public class CityEntryHelper {
     public void deleteCity(Connection connection, String cityName) throws SQLException {
         PreparedStatement deleteStatement = connection.prepareStatement(DELETE_QUERY);
         deleteStatement.setString(1, cityName);
+        deleteStatement.executeUpdate();
     }
 
 }
