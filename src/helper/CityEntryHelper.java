@@ -46,6 +46,7 @@ public class CityEntryHelper {
             int kmsRequired = results.getInt("Kilometers_required");
             City city = new City(name,isTraversed,kmsRequired);
             System.out.println(city);
+            System.out.println("------------------------------");
         }
     }
 
