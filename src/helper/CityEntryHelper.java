@@ -60,7 +60,7 @@ public class CityEntryHelper {
     }
 
     // 4. to delete a city from the database.(DELETE)
-    public void deleteCity() {
+    public void deleteCity(Connection connection) {
 
     }
 
