@@ -52,7 +52,14 @@ public class Main {
                 }
                 break;
             case VIEW_ALL_CITIES:
-                helper.readAllCities(DatabaseConnection.getConnection());
+                try {
+                    helper.readAllCities(DatabaseConnection.getConnection());
+                } catch (SQLException exception) {
+                    JOptionPane.showMessageDialog(null,
+                            "The values could not be read from the database!",
+                            "Error 1",
+                            JOptionPane.ERROR_MESSAGE);
+                }
                 break;
             case MODIFY_CITY:
                 break;
