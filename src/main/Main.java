@@ -42,6 +42,8 @@ public class Main {
                 boolean isTraversed = scanner.nextBoolean();*/
                 String name = JOptionPane.showInputDialog(null,
                         "Please input the name of the city: ", "City Name",JOptionPane.PLAIN_MESSAGE);
+                boolean isTraversed = JOptionPane.showInputDialog(null,
+                        "Have you been to the city? (true/false): ","Traversed",JOptionPane.PLAIN_MESSAGE);
                 int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
                 try {
                     helper.createNewCity(DatabaseConnection.getConnection(),new City(name,isTraversed,kmsRequired));
