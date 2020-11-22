@@ -21,6 +21,7 @@ public class CityEntryHelper {
 
     private static final String READ_QUERY = "SELECT * FROM cities";
     public static final String NAME_COLUMN = "Name";
+    public static final String TRAVERSED = "Traversed";
 
     // 1. to add a city in the database (CREATE)
     public boolean createNewCity(Connection connection, City city) throws SQLException {
@@ -41,7 +42,7 @@ public class CityEntryHelper {
         ResultSet results = readStatement.executeQuery();
         while (results.next()) {
             String name = results.getString(NAME_COLUMN);
-            boolean isTraversed = results.getBoolean("Traversed");
+            boolean isTraversed = results.getBoolean(TRAVERSED);
         }
     }
 
