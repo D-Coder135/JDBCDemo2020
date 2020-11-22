@@ -41,6 +41,7 @@ public class CityEntryHelper {
         ResultSet results = readStatement.executeQuery();
         while (results.next()) {
             String name = results.getString(NAME_COLUMN);
+            boolean isTraversed = results.getBoolean("Traversed");
         }
     }
 
