@@ -38,6 +38,9 @@ public class CityEntryHelper {
     public void readAllCities(Connection connection) throws SQLException {
         PreparedStatement readStatement = connection.prepareStatement(READ_QUERY);
         ResultSet results = readStatement.executeQuery();
+        while (results.next()) {
+
+        }
     }
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
