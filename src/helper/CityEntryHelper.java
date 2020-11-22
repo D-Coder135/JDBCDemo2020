@@ -54,7 +54,7 @@ public class CityEntryHelper {
         PreparedStatement updateStatement = connection.prepareStatement(UPDATE_QUERY);
         updateStatement.setString(1, newName);
         updateStatement.setString(2, oldName);
-        updateStatement.executeQuery();
+        updateStatement.executeUpdate();
     }
 
     // 4. to delete a city from the database.(DELETE)
