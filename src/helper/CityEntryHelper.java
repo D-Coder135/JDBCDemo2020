@@ -33,7 +33,7 @@ public class CityEntryHelper {
     }
 
     // 2. to read all the cities from the database.(READ)
-    public void readAllCities() {
+    public void readAllCities(Connection connection) {
 
     }
 
