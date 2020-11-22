@@ -62,6 +62,9 @@ public class Main {
                 }
                 break;
             case MODIFY_CITY:
+                String oldName = JOptionPane.showInputDialog(null,
+                        "Please enter the old name of the city", "City Name"
+                        ,JOptionPane.PLAIN_MESSAGE);
                 break;
             case DELETE_CITY:
                 break;
