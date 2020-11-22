@@ -55,7 +55,7 @@ public class CityEntryHelper {
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
     public void modifyCity(Connection connection) {
-
+        PreparedStatement updateStatement = connection.prepareStatement(UPDATE_QUERY);
     }
 
     // 4. to delete a city from the database.(DELETE)
