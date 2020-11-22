@@ -9,6 +9,7 @@ import connection.DatabaseConnection;
 import data.City;
 import helper.CityEntryHelper;
 
+import javax.swing.*;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -34,10 +35,13 @@ public class Main {
         switch (choice) {
             case CREATE_CITY:
                 CityEntryHelper helper = new CityEntryHelper();
+
                 /* System.out.println("Please enter the name of the city: ");
                 String name = scanner.nextLine().trim();
                 System.out.println("Have you been to the city yet? (true/false)");
                 boolean isTraversed = scanner.nextBoolean();*/
+                String name = JOptionPane.showInputDialog(null,
+                        "Please input the name of the city: ", "City Name",JOptionPane.PLAIN_MESSAGE);
                 int kmsRequired = (int) ((Math.random() * 2000.0) + 100.0);
                 try {
                     helper.createNewCity(DatabaseConnection.getConnection(),new City(name,isTraversed,kmsRequired));
