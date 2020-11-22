@@ -59,7 +59,7 @@ public class City {
 
     @Override
     public String toString() {
-        return String.format("%s, %s. %d", name, isTraversed ? "I have been there" : "I have not been there",
+        return String.format("%-15s, %-20s. %-4d", name, isTraversed ? "I have been there" : "I have not been there",
                 kilometersRequired);
     }
 }
