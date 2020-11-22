@@ -17,6 +17,8 @@ public class CityEntryHelper {
     private static final String INSERT_QUERY = "Insert into cities (Name, Traversed, Kilometers_required)"
             + "values (?, ? ,?)";
 
+    private static final String READ_QUERY = "SELECT * FROM cities";
+
     // 1. to add a city in the database (CREATE)
     public boolean createNewCity(Connection connection, City city) throws SQLException {
         String name = city.getName();
