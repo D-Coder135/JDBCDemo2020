@@ -81,6 +81,7 @@ public class Main {
                 name = JOptionPane.showInputDialog(null,
                         "Please enter the name of the city you want to delete from the database",
                         "Delete City", JOptionPane.PLAIN_MESSAGE);
+                helper.deleteCity(DatabaseConnection.getConnection(), name);
                 break;
             default:
         }
