@@ -35,7 +35,7 @@ public class CityEntryHelper {
     // 2. to read all the cities from the database.(READ)
     public void readAllCities(Connection connection) throws SQLException {
         PreparedStatement readStatement = connection.prepareStatement(READ_QUERY);
-
+        readStatement.executeQuery();
     }
 
     // 3. to modify the attributes of a city in the database.(UPDATE)
