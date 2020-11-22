@@ -20,6 +20,9 @@ public class CityEntryHelper {
             + "values (?, ? ,?)";
 
     private static final String READ_QUERY = "SELECT * FROM cities";
+
+    public static final String UPDATE_QUERY = "UPDATE cities SET Kilometers_required = ? WHERE Name = ?";
+
     public static final String NAME_COLUMN = "Name";
     public static final String TRAVERSED = "Traversed";
 
