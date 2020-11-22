@@ -68,6 +68,7 @@ public class Main {
                 String newName = JOptionPane.showInputDialog(null,
                         "Please enter the new name of the city", "City New Name"
                         ,JOptionPane.PLAIN_MESSAGE);
+                helper.modifyCity(DatabaseConnection.getConnection(),oldName,newName);
                 break;
             case DELETE_CITY:
                 break;
