@@ -62,6 +62,7 @@ public class CityEntryHelper {
     // 4. to delete a city from the database.(DELETE)
     public void deleteCity(Connection connection, String cityName) throws SQLException {
         PreparedStatement deleteStatement = connection.prepareStatement(DELETE_QUERY);
+        deleteStatement.setString(1, cityName);
     }
 
 }
